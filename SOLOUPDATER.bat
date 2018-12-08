@@ -15,18 +15,23 @@ set olderzipname=%oldername%%zipext%
 cd .\OLDVERSIONS\
 
 echo Verification de l'existance d'un zip au meme nom avant telechargement...
-echo .
+echo.
 
 if exist %commonzipname% (
 	echo Fichier %commonzipname% trouve, supression en cours...
+	echo.
 	del %commonzipname%
+	echo.
 	echo Fichier supprime
 ) else ( echo pas de fichier %commonzipname% trouve )
 
+echo.
 
 if exist %olderzipname% (
 	echo Fichier %olderzipname% trouve, supression en cours...
+	echo.
 	del %olderzipname%
+	echo.
 	echo Fichier supprime
 ) else ( echo pas de fichier %olderzipname% trouve )
 
@@ -40,12 +45,11 @@ set /p oldversion="[NUMERO ANCIENNE VERSION POUR ZIP]: "
 set versioningzipname="%commonname% - %oldversion%%zipext%"
 
 
-echo %versioningzipname%
 
 if exist %versioningzipname% (
-echo .
+echo.
 del %versioningzipname%
-echo .
+echo.
 echo %versioningzipname% was existing, it has been deleted
 echo.
 )
@@ -64,9 +68,13 @@ hub release create -o -a %versioningzipname% -m "OLD: %oldversion%" %oldversion%
 cd ..
 
 7z a %commonzipname% bin/ config/ mods/
+echo.
 echo "Suppression de la Release precedente..."
+echo.
 hub release delete Main
+echo.
 echo "Release supprimee."
+echo.
 
 echo "Creation d'une Release..."
 set /p newversion="[NUMERO NOUVELLE VERSION POUR TITRE RELEASE]: "
