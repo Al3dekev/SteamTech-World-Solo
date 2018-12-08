@@ -1,7 +1,7 @@
 @echo off
 ::ZIP FILE NAME VARIABLE
 set commonname="SteamTechWorldSOLO"
-set oldername="SteamTech World - SOLO"
+set oldername="SteamTech.World.-.SOLO"
 
 
 ::ZIP VARIABLE
