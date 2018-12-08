@@ -1,27 +1,47 @@
 @echo off
-::ZIP VARIABLE
-set zipfile="SteamTechWorldSOLO.zip"
+::ZIP FILE NAME VARIABLE
+set commonname="SteamTech WorldSOLO"
+set oldername="SteamTech World - SOLO"
 
-cd ..
+
+::ZIP VARIABLE
+set zipext='.zip'
+set commonzipname=%commonname%%zipext%
+set olderzipname=%oldername%%zipext%
+
+
+
+
+::TAKING BACK ANCIENT VER
+cd '.\OLDVERSIONS\'
 hub download MAIN
 
-cd '.\SteamTech World - SOLO\'
-
-set /p zipvername="Version ancien zip: "
-set newZip="Steamtech World - SOLO - "%zipvername%".zip"
-ren ../%zipfile% %newZip%
-
-hub release create -o -a %newZip% -m %zipvername% %zipvername%
+::CHOOSE NEW ZIP NAME FOR THE OLDER VER
+set /p oldversion="[NUMERO ANCIENNE VERSION POUR ZIP]: "
+set versioningzipname=%commonname%" - "%oldversion%%zipext%
 
 
+if exist %olderzipname% (
 
-7z a %zipfile% bin/ config/ mods/
+ren %olderzipname% %versioningzipname%
+
+) else (
+ren %commonzipname% %versioningzipname%
+)
+
+::OLD VERSION ONLINE
+hub release create -o -a %versioningzipname% -m "OLD: "%oldversion% %oldversion%
+
+
+cd ..
+
+7z a %commonzipname% bin/ config/ mods/
 echo "Suppression de la Release precedente..."
 hub release delete Main
 echo "Release supprimee."
 
-echo "Creation d'une Release:"
-set /p titre="Titre: "
+echo "Creation d'une Release..."
+set /p newversion="[NUMERO NOUVELLE VERSION POUR TITRE RELEASE]: "
 
-hub release create -o -a %zipfile% -m %titre% Main
+hub release create -o -a %commonzipname% -m %newversion% Main
 PAUSE
