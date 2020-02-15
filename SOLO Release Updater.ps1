@@ -55,7 +55,12 @@ if (Test-Path $ZipFileName) {
     del $ZipFileName
 }
 
-7z a $ZipFileName bin/ config/ mods/ resourcepacks/
+if ($verFile[0].Substring($verFile[0].Length - 4) -eq "SOLO") {
+    7z a $ZipFileName bin/ config/ mods/ resourcepacks/
+} else {
+    7z a $ZipFileName libraries/ config/ mods/ $($verFile[0]).jar run.bat minecraft_server.1.12.2.jar
+}
+
 
 echo "Suppression de l'ancien 'Main' release..."
 hub release delete Main
@@ -66,3 +71,4 @@ hub release create -o -a $ZipFileName -m "Latest: $($verFile[1])" Main
 
 echo "Processus terminé"
 PAUSE
+start chrome $(hub release show -f %U Main)
