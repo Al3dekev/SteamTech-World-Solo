@@ -71,4 +71,3 @@ hub release create -o -a $ZipFileName -m "Latest: $($verFile[1])" Main
 
 echo "Processus terminé"
 PAUSE
-start chrome $(hub release show -f %U Main)
