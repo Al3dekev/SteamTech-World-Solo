@@ -14,5 +14,5 @@ if (Test-Path $ZipFileName){
 if ($verFile[0].Substring($verFile[0].Length - 4) -eq "SOLO") {
     7z a $ZipFileName bin/ config/ mods/ resourcepacks/
 } else {
-    7z a $ZipFileName libraries/ config/ mods/ $($verFile[0]).jar run.bat minecraft_server.1.12.2.jar
+    7z a $ZipFileName libraries/ config/ mods/ $("$($verFile[0]).jar") run.bat minecraft_server.1.12.2.jar
 }
