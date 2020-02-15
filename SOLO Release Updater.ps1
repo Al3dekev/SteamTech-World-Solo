@@ -43,7 +43,7 @@ hub release download Main
 
 ren $ZipFileName $OldVersionZipName
 
-hub release create -o -a $OldVersionZipName -m "OLD: $($verFile[2])" $verFile[2]
+hub release create -o -a $OldVersionZipName -m "Old: $($verFile[2])" $verFile[2]
 
 
 cd ..
@@ -62,7 +62,7 @@ hub release delete Main
 echo "Main release supprimée."
 
 echo "Création de la nouvelle release 'Main'..."
-hub release create -o -a $ZipFileName -m "LATEST: $($verFile[1])" Main
+hub release create -o -a $ZipFileName -m "Latest: $($verFile[1])" Main
 
 echo "Processus terminé"
 PAUSE
