@@ -1,0 +1,34 @@
+***STEAMTECH WORLD - CHANGE LOG***
+
+This is the Changelog file of the SteamTech World Minecraft Modpack.
+Version system: W.XX.YZ
+
+W: Minecraft version update
+XX: Major update: Mod removed/added or Forge update
+Y:  Mods have been updated
+Z: Minor update, making the modpack working 
+
+
+** V. 1.31.40 **
+
+ * EnderCore mod added (0.5.73) - It is a dependancy of Ender IO mod
+ * CodeChickenLib updated from 3.2.2.353 to 3.2.3.358
+ * OpenModsLib updated from 0.12.1 to 0.12.2
+ * ChickenChunks updated from 2.4.1.73 to 2.4.2.74
+ * CoFHWorld mod updated from 1.3.0.6 to 1.3.1.7
+ * CoFHCore mod updated from 4.6.1.22 to 4.6.3.27
+ * OpenBlocks updated from 1.8 to 1.8.1
+ * NotEnoughItems updated from 2.4.2.240 to 2.4.3.245
+ * ExtraCells 2 updated from 2.6.1a to 2.6.5
+ * Extra Utilities 2 updated from 1.9.8 to 1.9.9
+ * Tinker's Construct mod updated from 2.13.0.179 to 2.13.0.183
+ * RebornCore mod updated from 3.18.1.514 to 3.19.2.522
+ * Thermal Innovation updated from 0.3.1.8 to 0.3.3.12
+ * Thermal Foundation updated from 2.6.1.22 to 2.6.3.27
+ * Thermal Expansion updated from 5.5.2.39 to 5.5.2.43
+ * Thermal Cultivation updated from 0.3.1.8 to 0.3.3.12
+ * Buildcraft updated from 7.99.24.4 to 7.99.24.6
+ * Genetics Reborn updated from 1.21 to 1.25
+ * NoMoreRecipeConflict mod added - Version 0.13
+ * EnderIO mod added - Version 5.1.55
+ * Sync mod updated from 7.0.2 to 7.1.0
