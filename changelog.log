@@ -8,10 +8,19 @@ XX: Major update: Mod removed/added or Forge update
 Y:  Mods have been updated
 Z: Minor update, making the modpack working 
 
+** V. 1.32.02 **
+
+ * Forge updated from 14.23.5.2847 to 14.23.5.2855
+ * SteamTechWorld assets added to CustomMainMenu 2.0.9.1
+
+
+** V. 1.32.01 **
+
+ * Testing
+
 
 ** V. 1.32.00 **
 
- * Forge updated from 14.23.5.2847 to 14.23.5.2855
  * Bewitchment Legacy from 0.0.21.10 to 0.0.22.64
  * Just Enough Items from 4.15.0.291 to 4.16.1.302
  * GalacticraftCore from 4.0.1.181 to 4.0.2.280
